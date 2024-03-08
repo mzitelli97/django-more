@@ -447,7 +447,7 @@ class BaseDatabaseSchemaEditor:
         # Return the sql
         return sql, params
 
-    def _alter_column_type_sql(self, model, old_field, new_field, new_type):
+    def _alter_column_type_sql(self, model, old_field, new_field, new_type, *args, **kwargs):
         """ Test for a parametised type and treat appropriately """
         new_type, params = self.column_sql_paramatized(new_type)
         return (
